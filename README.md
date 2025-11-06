@@ -110,4 +110,4 @@ Configures all paths, parameters, and experiment settings.
 - `search_boxpolts.ipynb`: some box plot followed by `pca_search_v1.ipynb`
 
 2025 Nov 06 Update:
-- `fixation_duration_trajectory.py`: latest plotter for the age trend on fixation duration.
+- `age_fixation_plotter.py`: latest plotter for the age trend on fixation duration.
