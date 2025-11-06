@@ -102,3 +102,12 @@ Configures all paths, parameters, and experiment settings.
 
 - Default `max_dist = 1.5` degrees: fixation must be within this distance of target to count as "fixated"
 - Default `min_dur = 0.2` seconds: fixation must exceed this duration to count as deliberate
+
+
+### Analysis code by Claire
+- `pca_freeviewing_v2.ipynb`: data analysis and PCA of free viewing dataset
+- `pca_search_v1.ipynb`: data analysis, PCA, and GMM cluster of target-searching dataset
+- `search_boxpolts.ipynb`: some box plot followed by `pca_search_v1.ipynb`
+
+2025 Nov 06 Update:
+- `fixation_duration_trajectory.py`: latest plotter for the age trend on fixation duration.
