@@ -2,6 +2,8 @@
 
 This project processes and analyzes eye-tracking data from a visual search and free-viewing experiment.
 
+Original data and pre-processing code download from: https://osf.io/kf4sb/files/nv8cu by Open Science Framework(OSF).
+
 ## Results Highlights
 
 - Fixation duration trajectories by age: `analysis_results/plots/fixation_duration_trajectory/`
