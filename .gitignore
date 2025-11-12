@@ -8,6 +8,8 @@ __pycache__/
 data/
 analysis_results/
 AOIs/
+**/temp/**
+**/tmp/**
 
 stimulus_code/stimuli/*.png
 stimulus_code/image_hd.png
