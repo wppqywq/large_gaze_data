@@ -14,7 +14,7 @@ OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 OUTPUT_NAME_FIX = "fixation_duration.png"
 OUTPUT_NAME_COMBO = "fixdur_saccamp.png"
 
-WINDOW_SPAN_YEARS = 3          # local mean window width (inclusive, integer ages)
+WINDOW_SPAN_YEARS = 7          # local mean window width (inclusive, integer ages)
 WINDOW_STEP_YEARS = 2          # step between consecutive window centers
 LOW_DURATION_THRESHOLD_MS = 125.0
 POLY_ORDER = 5
@@ -29,8 +29,8 @@ def generate_plot(
     *,
     include_saccade: bool = False,
     min_age: Optional[float] = None,
-    max_age: Optional[float] = 69.0, # too large error bar due to insufficient data after 70 year
-    enable_polynomial: bool = False,
+    max_age: Optional[float] = 70, # too large error bar due to insufficient data after 70 year
+    enable_polynomial: bool = True,
     suffix: str = "",
 ) -> Optional[Path]:
     """Create a trajectory plot for the given task."""

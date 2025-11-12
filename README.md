@@ -2,6 +2,20 @@
 
 This project processes and analyzes eye-tracking data from a visual search and free-viewing experiment.
 
+## Results Highlights
+
+- Fixation duration trajectories by age: `analysis_results/plots/fixation_duration_trajectory/`
+- PCA report (detailed figures and tables): `PCA_report.pdf`
+
+### PCA summary
+- Free viewing:
+  - PC1 explains ~30% variance; PC2 ~20%; first 6 PCs ~90%.
+  - Loadings: PC1 dominated by fixation behavior; PC2 by saccade dynamics.
+- Visual search:
+  - PC1 26.9%, PC2 14.4%, PC3 9.4%; first 10 PCs ~90%.
+  - PC1–PC2 shows multimodal structure; GMM suggests 6 clusters with uneven sizes.
+  - Cluster sketches(6over 4,583 participants): 0 Guesser(652 ppls); 1 Full miss(2073); 2 Full hit(706); 3 Slow action(137); 4 Non-linear people(360); 5 LBFTS(654).
+
 ## Data Structure
 
 All data organized by task: `search/` and `freeviewing/`.
@@ -62,19 +76,7 @@ Runs the complete preprocessing workflow:
   - Input(x,y,t) -> velocity -> K-mean cluster to separate fixations from saccades.
 - Data stability metrics
   RMS of gaze position using saccade coord median.
-- Plotters:
-
-  - `plot_timeseries()`: Gaze trajectory with fixation periods overlaid
-  - `plot_single_trace()`: Fixation sequence visualization on task image
-  - `plot_demographics()`: Age and gender distribution
-  - `freeviewing_heatmap()`: Aggregate attention map across all participants
-  - `compute_accuracy_response_based()`: Button response accuracy by target location
-  - `compute_accuracy_gaze_based()`: Gaze-based accuracy, classifies as:
-    - Full hit (responded correctly + fixated target)
-    - LBFTS (Looked But Failed To See: fixated + wrong response)
-    - Guessed (responded + no fixation on target)
-    - Full miss (no response + no fixation)
-  - `plot_sdt_overlay()`: Accuracy classifications visualized on task image
+- Plotters
 
 
 ### `create_stimulus.py`
@@ -104,10 +106,8 @@ Configures all paths, parameters, and experiment settings.
 - Default `min_dur = 0.2` seconds: fixation must exceed this duration to count as deliberate
 
 
-### Analysis code by Claire
+### Analysis code by Youyou Yang
 - `pca_freeviewing_v2.ipynb`: data analysis and PCA of free viewing dataset
 - `pca_search_v1.ipynb`: data analysis, PCA, and GMM cluster of target-searching dataset
 - `search_boxpolts.ipynb`: some box plot followed by `pca_search_v1.ipynb`
-
-2025 Nov 06 Update:
 - `age_fixation_plotter.py`: latest plotter for the age trend on fixation duration.
